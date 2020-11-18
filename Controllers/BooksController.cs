@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Panca_Delia_Lab2.Data;
-using Panca_Delia_Lab2.Models;
+using LibraryModel.Data;
+using LibraryModel.Models;
 
 namespace Panca_Delia_Lab2.Controllers
 {

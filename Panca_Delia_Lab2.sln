@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panca_Delia_Lab2", "Panca_Delia_Lab2.csproj", "{A79354B6-203A-4635-8F1B-98D5EB614254}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panca_Delia_Lab2", "Panca_Delia_Lab2.csproj", "{A79354B6-203A-4635-8F1B-98D5EB614254}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryModel", "..\LibraryModel\LibraryModel.csproj", "{6C5B4488-3C73-41F4-8C69-AE4CB5A00862}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryWebAPI", "..\LibraryWebAPI\LibraryWebAPI.csproj", "{16761FF1-6761-4D64-AE2B-163AC70C09FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{A79354B6-203A-4635-8F1B-98D5EB614254}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A79354B6-203A-4635-8F1B-98D5EB614254}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A79354B6-203A-4635-8F1B-98D5EB614254}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C5B4488-3C73-41F4-8C69-AE4CB5A00862}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C5B4488-3C73-41F4-8C69-AE4CB5A00862}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C5B4488-3C73-41F4-8C69-AE4CB5A00862}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C5B4488-3C73-41F4-8C69-AE4CB5A00862}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16761FF1-6761-4D64-AE2B-163AC70C09FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16761FF1-6761-4D64-AE2B-163AC70C09FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16761FF1-6761-4D64-AE2B-163AC70C09FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16761FF1-6761-4D64-AE2B-163AC70C09FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

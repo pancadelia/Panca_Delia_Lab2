@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Panca_Delia_Lab2.Data;
+using LibraryModel.Data;
 
 namespace Panca_Delia_Lab2.Migrations
 {
@@ -21,7 +21,7 @@ namespace Panca_Delia_Lab2.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Panca_Delia_Lab2.Models.Book", b =>
+            modelBuilder.Entity("LibraryModel.Models.Book", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -42,7 +42,7 @@ namespace Panca_Delia_Lab2.Migrations
                     b.ToTable("Book");
                 });
 
-            modelBuilder.Entity("Panca_Delia_Lab2.Models.Customer", b =>
+            modelBuilder.Entity("LibraryModel.Models.Customer", b =>
                 {
                     b.Property<int>("CustomerID")
                         .HasColumnType("int");
@@ -61,7 +61,7 @@ namespace Panca_Delia_Lab2.Migrations
                     b.ToTable("Customer");
                 });
 
-            modelBuilder.Entity("Panca_Delia_Lab2.Models.Order", b =>
+            modelBuilder.Entity("LibraryModel.Models.Order", b =>
                 {
                     b.Property<int>("OrderID")
                         .ValueGeneratedOnAdd()
@@ -86,7 +86,7 @@ namespace Panca_Delia_Lab2.Migrations
                     b.ToTable("Order");
                 });
 
-            modelBuilder.Entity("Panca_Delia_Lab2.Models.PublishedBooks", b =>
+            modelBuilder.Entity("LibraryModel.Models.PublishedBooks", b =>
                 {
                     b.Property<int>("BookID")
                         .HasColumnType("int");
@@ -101,7 +101,7 @@ namespace Panca_Delia_Lab2.Migrations
                     b.ToTable("PublishedBook");
                 });
 
-            modelBuilder.Entity("Panca_Delia_Lab2.Models.Publishers", b =>
+            modelBuilder.Entity("LibraryModel.Models.Publishers", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -122,30 +122,30 @@ namespace Panca_Delia_Lab2.Migrations
                     b.ToTable("Publisher");
                 });
 
-            modelBuilder.Entity("Panca_Delia_Lab2.Models.Order", b =>
+            modelBuilder.Entity("LibraryModel.Models.Order", b =>
                 {
-                    b.HasOne("Panca_Delia_Lab2.Models.Book", "Book")
+                    b.HasOne("LibraryModel.Models.Book", "Book")
                         .WithMany("Orders")
                         .HasForeignKey("BookID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Panca_Delia_Lab2.Models.Customer", "Customer")
+                    b.HasOne("LibraryModel.Models.Customer", "Customer")
                         .WithMany("Orders")
                         .HasForeignKey("CustomerID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Panca_Delia_Lab2.Models.PublishedBooks", b =>
+            modelBuilder.Entity("LibraryModel.Models.PublishedBooks", b =>
                 {
-                    b.HasOne("Panca_Delia_Lab2.Models.Book", "Book")
+                    b.HasOne("LibraryModel.Models.Book", "Book")
                         .WithMany("PublishedBooks")
                         .HasForeignKey("BookID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Panca_Delia_Lab2.Models.Publishers", "Publisher")
+                    b.HasOne("LibraryModel.Models.Publishers", "Publisher")
                         .WithMany("PublishedBooks")
                         .HasForeignKey("PublisherID")
                         .OnDelete(DeleteBehavior.Cascade)

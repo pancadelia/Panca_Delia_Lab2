@@ -1,6 +1,6 @@
 using System;
 
-namespace Panca_Delia_Lab2.Models
+namespace LibraryModel.Models
 {
     public class ErrorViewModel
     {
